@@ -23,7 +23,7 @@ func Load() Config {
 	databaseURL := os.Getenv("DATABASE_URL")
 	if databaseURL == "" {
 		// #nosec G101 -- local development fallback only; production must set DATABASE_URL.
-		databaseURL = "postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable"
+		databaseURL = "postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable" // pragma: allowlist secret
 	}
 
 	redisAddr := os.Getenv("REDIS_ADDR")

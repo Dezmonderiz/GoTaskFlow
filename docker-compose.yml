@@ -8,7 +8,7 @@ services:
       - "8080:8080"
     environment:
       PORT: 8080
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/gotaskflow?sslmode=disable
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/gotaskflow?sslmode=disable # pragma: allowlist secret
       REDIS_ADDR: redis:6379
       REDIS_PASSWORD: ""
       REDIS_DB: 0
@@ -28,7 +28,7 @@ services:
       - ./migrations:/migrations:ro
     command:
       - -path=/migrations
-      - -database=postgres://postgres:postgres@postgres:5432/gotaskflow?sslmode=disable
+      - -database=postgres://postgres:postgres@postgres:5432/gotaskflow?sslmode=disable # pragma: allowlist secret
       - up
     depends_on:
       postgres:
@@ -40,7 +40,7 @@ services:
     environment:
       POSTGRES_DB: gotaskflow
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: postgres # pragma: allowlist secret
     ports:
       - "5432:5432"
     volumes:
