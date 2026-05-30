@@ -4,6 +4,7 @@
 artifacts
 documentation
 tests
+СкороходовМА*/
 
 .env
 .env.*

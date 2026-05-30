@@ -12,7 +12,7 @@ FROM alpine:3.22
 
 WORKDIR /app
 
-RUN adduser -D -H appuser
+RUN apk add --no-cache ca-certificates && adduser -D -H appuser
 
 COPY --from=builder /out/gotaskflow ./gotaskflow
 COPY web ./web

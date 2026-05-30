@@ -51,8 +51,8 @@ docker compose up --build
 Compose поднимает сервисы:
 
 - `app` - Go API и frontend;
-- `postgres` - база данных PostgreSQL;
-- `redis` - кэш для `GET /api/stats`;
+- `db` - база данных PostgreSQL;
+- `cache` - Redis-кэш для `GET /api/stats`;
 - `migrate` - одноразовый запуск миграций перед стартом приложения.
 
 После запуска приложение доступно на:
