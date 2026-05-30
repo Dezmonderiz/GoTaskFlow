@@ -76,14 +76,14 @@ docker compose down -v
 По умолчанию приложение ожидает PostgreSQL по адресу:
 
 ```text
-postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable
+postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable <!-- pragma: allowlist secret -->
 ```
 
 Можно переопределить настройки через переменные окружения:
 
 ```text
 PORT=8080
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable # pragma: allowlist secret
 REDIS_ADDR=localhost:6379
 REDIS_PASSWORD=
 REDIS_DB=0

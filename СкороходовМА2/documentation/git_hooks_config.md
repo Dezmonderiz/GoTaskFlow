@@ -36,8 +36,8 @@ pre-commit install
 
 В проекте есть учебные локальные значения:
 
-- `postgres://postgres:postgres@localhost:5432/gotaskflow`;
-- `POSTGRES_PASSWORD=postgres`.
+- `postgres://postgres:postgres@localhost:5432/gotaskflow`; <!-- pragma: allowlist secret -->
+- `POSTGRES_PASSWORD=postgres`. <!-- pragma: allowlist secret -->
 
 Они используются только для локального Docker Compose и помечены inline-комментариями `pragma: allowlist secret`. Production-секреты так хранить нельзя: их нужно задавать через GitHub Secrets, `.env` вне Git или secret manager.
 
