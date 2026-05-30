@@ -14,3 +14,6 @@ tmp/
 coverage.*
 
 vendor/
+
+# Local coursework folders
+СкороходовМА*/
