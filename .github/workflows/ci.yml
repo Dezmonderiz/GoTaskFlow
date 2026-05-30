@@ -22,8 +22,19 @@ jobs:
           go-version-file: go.mod
           cache: true
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
       - name: Install dependencies
         run: go mod download
+
+      - name: Install pre-commit
+        run: python -m pip install pre-commit
+
+      - name: Run pre-commit checks
+        run: pre-commit run --all-files
 
       - name: Run gofmt check
         run: |
