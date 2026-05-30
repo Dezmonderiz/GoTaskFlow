@@ -1,0 +1,16 @@
+.idea/
+.env
+.env.*
+!.env.example
+
+bin/
+dist/
+build/
+tmp/
+
+*.exe
+*.test
+*.out
+coverage.*
+
+vendor/
