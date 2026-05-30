@@ -97,7 +97,7 @@ SQL-миграции лежат в `migrations`.
 Пример запуска через `golang-migrate`:
 
 ```bash
-migrate -path migrations -database "postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable" up
+migrate -path migrations -database "postgres://postgres:postgres@localhost:5432/gotaskflow?sslmode=disable" up # pragma: allowlist secret
 ```
 
 ## Тесты
