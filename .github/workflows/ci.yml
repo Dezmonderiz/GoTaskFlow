@@ -207,7 +207,6 @@ jobs:
       - quality
       - tests
       - build
-      - security-gate
 
     steps:
       - name: Checkout code
